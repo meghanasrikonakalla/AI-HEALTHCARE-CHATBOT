@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Phone-like chat container -->
+  <div class="phone-frame">
+    <div class="chat-header">
+      <div>Chat Bot</div>
+      <div>
+        <button id="restart-btn" class="restart-btn" title="New Consultation">🔄</button>
+        <a href="{{ url_for('logout') }}" class="logout-btn" title="Logout">🚪</a>
+      </div>
+    </div>
+    <div id="chat-box" class="chat-box">
+      <div class="message bot welcome-message">
+        <h2>Welcome to Your Personal Health Assistant! 🤖</h2>
+        <p>I'm here to help you assess your symptoms and provide guidance. Please describe how you're feeling, and I'll do my best to assist you.</p>
+        <em>Disclaimer: This is an AI-powered tool and not a substitute for professional medical advice.</em>
+      </div>
+    </div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type your symptoms..." autocomplete="off">
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot - Welcome</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth_style.css') }}">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landing-content">
+            <div class="logo-section">
+                <h1>🏥</h1>
+                <h2>Healthcare Chatbot</h2>
+                <p class="tagline">Your AI-powered health assistant</p>
+            </div>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Smart Analysis</h3>
+                    <p>Advanced symptom analysis with AI technology</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💊</span>
+                    <h3>Quick Results</h3>
+                    <p>Instant health insights and recommendations</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Secure & Private</h3>
+                    <p>Your health data stays private and protected</p>
+                </div>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="{{ url_for('login') }}" class="btn-3d login-btn">
+                    <span>Login</span>
+                </a>
+                <a href="{{ url_for('signup') }}" class="btn-3d signup-btn">
+                    <span>Sign Up</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
